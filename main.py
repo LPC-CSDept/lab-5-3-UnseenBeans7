@@ -7,6 +7,19 @@ def mineven(numbers):
     Code Your Program here
     ########################################
     """
+    even_list = []
+    for num in numbers:
+        if num % 2 == 0:
+            even_list.append(num)
+        
+    minval = even_list[0]
+    for num in even_list:
+        if num < minval:
+            minval = num
+            
+    del(numbers[numbers.index(minval)])
+            
+    
 
     return minval
 
